@@ -1,0 +1,10 @@
+import { User, Product, Order, Cart, ValidationError } from './types';
+export declare function serializeUser(user: User): string;
+export declare function deserializeUser(json: string): User | ValidationError;
+export declare function serializeProduct(product: Product): string;
+export declare function deserializeProduct(json: string): Product | ValidationError;
+export declare function serializeOrder(order: Order): string;
+export declare function deserializeOrder(json: string): Order | ValidationError;
+export declare function serializeCart(cart: Cart): string;
+export declare function deserializeCart(json: string): Cart | ValidationError;
+export declare function isValidationError(val: unknown): val is ValidationError;
