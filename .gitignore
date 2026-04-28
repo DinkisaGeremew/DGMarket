@@ -1,6 +1,9 @@
 node_modules/
-dist/
 .env
 *.env.local
 frontend/dist/
 backend/dist/
+shared/dist/
+shared/src/**/*.js
+shared/src/**/*.js.map
+shared/src/**/*.d.ts
