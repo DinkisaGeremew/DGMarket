@@ -45,12 +45,6 @@ function compressImage(file: File): Promise<string> {
   });
 }
 
-const NAV: { key: Tab; icon: string; label: string }[] = [
-  { key: 'overview', icon: '📊', label: 'Overview' },
-  { key: 'shop',     icon: '🛍️', label: 'Shop' },
-  { key: 'cart',     icon: '🛒', label: 'My Cart' },
-  { key: 'orders',   icon: '📦', label: 'My Orders' },
-];
 
 export default function BuyerDashboard() {
   const { user, logout } = useAuth();
