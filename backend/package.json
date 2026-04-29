@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "ts-node-dev --respawn src/index.ts",
     "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
-    "start": "node dist/index.js",
+    "start": "node dist/out/backend/src/index.js",
     "test": "jest --runInBand"
   },
   "dependencies": {
