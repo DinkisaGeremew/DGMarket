@@ -31,9 +31,9 @@ app.use('/api/orders', ordersRouter);
 app.use('/api/payments', paymentsRouter);
 app.use('/api/admin', adminRouter);
 
-// Serve frontend static files in production
-if (process.env.NODE_ENV === 'production') {
-  const frontendDist = path.join(__dirname, '../../frontend/dist');
+// Serve frontend static files in production (only when frontend/dist exists)
+if (process.env.NODE_ENV === 'production' && process.env.SERVE_FRONTEND === 'true') {
+  const frontendDist = path.join(__dirname, '../../../frontend/dist');
   app.use(express.static(frontendDist));
   app.get('*', (_req: Request, res: Response) => {
     res.sendFile(path.join(frontendDist, 'index.html'));
